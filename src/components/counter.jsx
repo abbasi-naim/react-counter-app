@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
+import { Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
@@ -8,10 +9,10 @@ class Counter extends Component {
   };
   render() {
     return (
-      <React.Fragment>
-        <span>{this.formatCount()}</span>
-        <Button variant="primary">Increment</Button>
-      </React.Fragment>
+      <div>
+        <Badge bg="primary m-2">{this.formatCount()}</Badge>
+        <Button variant="secondary btn-sm">Increment</Button>
+      </div>
     );
   }
 
