@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Counter extends Component {
-    render() {
-        return <div></div>;
-    }
+  render() {
+    return <h1>Hello World!</h1>;
+  }
 }
 
 export default Counter;
