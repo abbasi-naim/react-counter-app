@@ -9,7 +9,7 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  handleIncrement = listid => {
+  handleIncrement = (product) => {
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -26,7 +26,10 @@ class Counter extends Component {
     return (
       <div>
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
-        <Button onClick={this.handleIncrement} variant="secondary btn-sm">
+        <Button
+          onClick={(product) => this.handleIncrement(product)}
+          variant="secondary btn-sm"
+        >
           Increment
         </Button>
         {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
