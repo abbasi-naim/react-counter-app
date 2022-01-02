@@ -28,34 +28,24 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <container>
-          <Row className="justify-content-md-center">
-            <Col xs lg="3">
-              <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
-            </Col>
-            <Col xs lg="3">
-              <Button
-                onClick={(product) => this.handleIncrement(product)}
-                variant="secondary btn-sm"
-              >
-                Increment
-              </Button>
-            </Col>
+        <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
 
-            {this.state.tags.length === 0 && (
-              <p>There is no tags to display!</p>
-            )}
-            <Col xs lg="3">
-              {/* {this.renderTags()} */}
-              <Button
-                onClick={(product) => this.handeDecrement(product)}
-                variant="secondary btn-sm"
-              >
-                Decrement
-              </Button>
-            </Col>
-          </Row>
-        </container>
+        <Button
+          onClick={(product) => this.handleIncrement(product)}
+          variant="secondary btn-sm m-2"
+        >
+          Increment
+        </Button>
+
+        {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
+
+        {/* {this.renderTags()} */}
+        <Button
+          onClick={(product) => this.handeDecrement(product)}
+          variant="secondary btn-sm"
+        >
+          Decrement
+        </Button>
       </div>
     );
   }
