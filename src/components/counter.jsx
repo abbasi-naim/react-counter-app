@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
   state = {
@@ -8,7 +10,7 @@ class Counter extends Component {
     return (
       <React.Fragment>
         <span>{this.formatCount()}</span>
-        <button>Increment</button>
+        <Button variant="primary">Increment</Button>
       </React.Fragment>
     );
   }
