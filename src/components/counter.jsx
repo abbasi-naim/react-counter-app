@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
-import { Badge, Col, Row } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
