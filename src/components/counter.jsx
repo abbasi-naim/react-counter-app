@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
-import { Badge } from "react-bootstrap";
+import { Badge, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
@@ -11,6 +11,9 @@ class Counter extends Component {
 
   handleIncrement = (product) => {
     this.setState({ count: this.state.count + 1 });
+  };
+  handeDecrement = (product) => {
+    this.setState({ count: this.state.count - 1 });
   };
 
   renderTags() {
@@ -25,15 +28,34 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
-        <Button
-          onClick={(product) => this.handleIncrement(product)}
-          variant="secondary btn-sm"
-        >
-          Increment
-        </Button>
-        {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
-        {this.renderTags()}
+        <container>
+          <Row className="justify-content-md-center">
+            <Col xs lg="3">
+              <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
+            </Col>
+            <Col xs lg="3">
+              <Button
+                onClick={(product) => this.handleIncrement(product)}
+                variant="secondary btn-sm"
+              >
+                Increment
+              </Button>
+            </Col>
+
+            {this.state.tags.length === 0 && (
+              <p>There is no tags to display!</p>
+            )}
+            <Col xs lg="3">
+              {/* {this.renderTags()} */}
+              <Button
+                onClick={(product) => this.handeDecrement(product)}
+                variant="secondary btn-sm"
+              >
+                Decrement
+              </Button>
+            </Col>
+          </Row>
+        </container>
       </div>
     );
   }
