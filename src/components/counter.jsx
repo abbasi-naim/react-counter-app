@@ -5,11 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
   state = {
-    count: 1,
+    count: 0,
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  handleIncrement = () => {
+  handleIncrement = listid => {
     this.setState({ count: this.state.count + 1 });
   };
 
