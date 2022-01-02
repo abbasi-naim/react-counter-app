@@ -6,13 +6,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Counter extends Component {
   state = {
     count: 1,
-    tag: ["tag1", "tag2", "tag3"],
+    tags: ["tag1", "tag2", "tag3"],
   };
   render() {
     return (
       <div>
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
         <Button variant="secondary btn-sm">Increment</Button>
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
