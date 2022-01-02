@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Counter extends Component {
   state = {
     count: 1,
+    tag: ["tag1", "tag2", "tag3"],
   };
   render() {
     return (
