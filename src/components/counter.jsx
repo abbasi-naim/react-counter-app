@@ -22,7 +22,7 @@ class Counter extends Component {
     return (
       <div>
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
-        <Button variant="secondary btn-sm">Increment</Button>
+        <Button onClick={} variant="secondary btn-sm">Increment</Button>
         {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
         {this.renderTags()}
       </div>
