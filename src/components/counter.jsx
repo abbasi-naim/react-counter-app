@@ -10,9 +10,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <Badge bg="primary m-2" style={{ fontSize: 25 }}>
-          {this.formatCount()}
-        </Badge>
+        <Badge bg="primary m-2">{this.formatCount()}</Badge>
         <Button variant="secondary btn-sm">Increment</Button>
       </div>
     );
