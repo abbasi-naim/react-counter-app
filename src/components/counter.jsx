@@ -1,8 +1,9 @@
+import react from "react";
 import React, { Component } from "react";
 
 class Counter extends Component {
   render() {
-    return <h1>Hello World!</h1>;
+    return <React.Fragment></React.Fragment>;
   }
 }
 
