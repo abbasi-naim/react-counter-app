@@ -8,9 +8,11 @@ class Counter extends Component {
     count: 0,
   };
   render() {
+    let classes = "";
+    classes += this.state.count === 0 ? "warning m-2" : "primary m-2";
     return (
       <div>
-        <Badge bg="primary m-2">{this.formatCount()}</Badge>
+        <Badge bg={classes}>{this.formatCount()}</Badge>
         <Button variant="secondary btn-sm">Increment</Button>
       </div>
     );
