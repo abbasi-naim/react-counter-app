@@ -1,4 +1,3 @@
-import react from "react";
 import React, { Component } from "react";
 
 class Counter extends Component {
@@ -12,7 +11,11 @@ class Counter extends Component {
         <button>Increment</button>
       </React.Fragment>
     );
-  }
+    }
+
+    formatCount() {
+        return this.state.count === 0 ? 'Zero' : this.state.count
+    }
 }
 
 export default Counter;
