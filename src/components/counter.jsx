@@ -5,17 +5,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    count: 1,
   };
   render() {
-    let classes = "";
-    classes += this.state.count === 0 ? "warning m-2" : "primary m-2";
     return (
       <div>
-        <Badge bg={classes}>{this.formatCount()}</Badge>
+        <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
         <Button variant="secondary btn-sm">Increment</Button>
       </div>
     );
+  }
+
+  getBadgeClasses() {
+    let classes = "";
+    classes += this.state.count === 0 ? "warning m-2" : "primary m-2";
+    return classes;
   }
 
   formatCount() {
