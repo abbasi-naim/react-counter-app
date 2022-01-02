@@ -8,16 +8,23 @@ class Counter extends Component {
     count: 1,
     tags: ["tag1", "tag2", "tag3"],
   };
+
+  renderTags() {
+    return (
+      <ul>
+        {this.state.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+    );
+  }
   render() {
     return (
       <div>
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
         <Button variant="secondary btn-sm">Increment</Button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
+        {this.renderTags()}
       </div>
     );
   }
