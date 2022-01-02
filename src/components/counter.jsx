@@ -13,7 +13,9 @@ class Counter extends Component {
     this.setState({ count: this.state.count + 1 });
   };
   handeDecrement = (product) => {
-    this.setState({ count: this.state.count - 1 });
+    if (this.state.count >= 1) {
+      this.setState({ count: this.state.count - 1 });
+    }
   };
 
   renderTags() {
