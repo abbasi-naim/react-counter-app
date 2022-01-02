@@ -9,9 +9,9 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
-  handleIncrement() {
+  handleIncrement = () => {
     console.log("Increment clicked!");
-  }
+  };
 
   renderTags() {
     return (
