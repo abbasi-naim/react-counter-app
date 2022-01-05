@@ -30,6 +30,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+        <h1>Counter #{this.props.id}</h1>
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
 
         <Button
