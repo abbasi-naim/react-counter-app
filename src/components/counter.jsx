@@ -12,7 +12,7 @@ class Counter extends Component {
   handleIncrement = (product) => {
     this.setState({ count: this.state.count + 1 });
   };
-  handeDecrement = (product) => {
+  handleDecrement = (product) => {
     if (this.state.count >= 1) {
       this.setState({ count: this.state.count - 1 });
     }
@@ -43,7 +43,7 @@ class Counter extends Component {
 
         {/* {this.renderTags()} */}
         <Button
-          onClick={(product) => this.handeDecrement(product)}
+          onClick={(product) => this.handleDecrement(product)}
           variant="secondary btn-sm"
         >
           Decrement
