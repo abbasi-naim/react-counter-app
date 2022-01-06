@@ -12,7 +12,7 @@ class Counters extends Component {
   };
 
   handleDelete = () => {
-    console.log("handle Event");
+    console.log("Event Handler Called");
   };
   render() {
     return (
