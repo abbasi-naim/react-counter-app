@@ -10,6 +10,10 @@ class Counters extends Component {
       { id: 4, value: 4 },
     ],
   };
+
+  handleDelete = () => {
+    console.log("handle Event");
+  };
   render() {
     return (
       <div>
