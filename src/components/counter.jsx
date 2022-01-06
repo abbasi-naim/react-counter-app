@@ -49,7 +49,7 @@ class Counter extends Component {
         >
           Decrement
         </Button>
-        <button className="btn btn-danger btn-sm m-2">Delete</button>
+        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
       </div>
     );
   }
