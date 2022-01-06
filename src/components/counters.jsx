@@ -21,6 +21,7 @@ class Counters extends Component {
           <Counter
             key={counter.id}
             value={counter.value}
+            onDelete={this.handleDelete}
             selected
             id={counter.id}
           />
