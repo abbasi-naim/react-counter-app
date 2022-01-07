@@ -10,18 +10,18 @@ class Counter extends Component {
   // };
 
   handleIncrement = (product) => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.props.counter.count + 1 });
   };
   handleDecrement = (product) => {
-    if (this.state.count >= 1) {
-      this.setState({ count: this.state.count - 1 });
+    if (this.props.counter.count >= 1) {
+      this.setState({ count: this.props.counter.count - 1 });
     }
   };
 
   renderTags() {
     return (
       <ul>
-        {this.state.tags.map((tag) => (
+        {this.props.counter.tags.map((tag) => (
           <li key={tag}>{tag}</li>
         ))}
       </ul>
@@ -40,7 +40,9 @@ class Counter extends Component {
           Increment
         </Button>
 
-        {this.state.tags.length === 0 && <p>There is no tags to display!</p>}
+        {this.props.counter.tags.length === 0 && (
+          <p>There is no tags to display!</p>
+        )}
 
         {/* {this.renderTags()} */}
         <Button
@@ -61,12 +63,12 @@ class Counter extends Component {
 
   getBadgeClasses() {
     let classes = "";
-    classes += this.state.count === 0 ? "warning m-2" : "primary m-2";
+    classes += this.props.counter.count === 0 ? "warning m-2" : "primary m-2";
     return classes;
   }
 
   formatCount() {
-    const { count } = this.state;
+    const { count } = this.props.counter;
     return count === 0 ? "Zero" : count;
   }
 }
