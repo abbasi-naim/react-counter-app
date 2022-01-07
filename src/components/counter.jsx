@@ -18,15 +18,15 @@ class Counter extends Component {
   //   }
   // };
 
-  renderTags() {
-    return (
-      <ul>
-        {this.props.counter.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderTags() {
+  //   return (
+  //     <ul>
+  //       {this.props.counter.tags.map((tag) => (
+  //         <li key={tag}>{tag}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
   render() {
     return (
       <div>
