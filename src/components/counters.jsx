@@ -11,6 +11,10 @@ class Counters extends Component {
     ],
   };
 
+  handleIncrement = (counter) => {
+    console.log(counter);
+  };
+
   handleReset = () => {
     const counters = this.state.counters.map((c) => {
       c.value = 0;
