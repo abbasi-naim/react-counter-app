@@ -34,7 +34,7 @@ class Counter extends Component {
         <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
 
         <Button
-          onClick={() => this.props.onIncrement(this.props.counter)}
+          onClick={() => this.props.onIncrement(this.props.counter.id)}
           variant="secondary btn-sm m-2"
         >
           Increment
@@ -46,7 +46,7 @@ class Counter extends Component {
 
         {/* {this.renderTags()} */}
         <Button
-          onClick={() => this.props.onDecrement(this.props.counter)}
+          onClick={() => this.props.onDecrement(this.props.counter.id)}
           variant="secondary btn-sm"
         >
           Decrement
