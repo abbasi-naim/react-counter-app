@@ -46,7 +46,7 @@ class Counter extends Component {
 
         {/* {this.renderTags()} */}
         <Button
-          onClick={(product) => this.handleDecrement(product)}
+          onClick={() => this.props.onDecrement(this.props.counter)}
           variant="secondary btn-sm"
         >
           Decrement
