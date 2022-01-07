@@ -4,10 +4,10 @@ import { Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Counter extends Component {
-  state = {
-    count: this.props.counter.value,
-    tags: ["tag1", "tag2", "tag3"],
-  };
+  // state = {
+  //   count: this.props.counter.value,
+  //   tags: ["tag1", "tag2", "tag3"],
+  // };
 
   handleIncrement = (product) => {
     this.setState({ count: this.state.count + 1 });
