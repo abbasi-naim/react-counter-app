@@ -9,14 +9,14 @@ class Counter extends Component {
   //   tags: ["tag1", "tag2", "tag3"],
   // };
 
-  handleIncrement = (product) => {
-    this.setState({ count: this.props.counter.count + 1 });
-  };
-  handleDecrement = (product) => {
-    if (this.props.counter.count >= 1) {
-      this.setState({ count: this.props.counter.count - 1 });
-    }
-  };
+  // handleIncrement = (product) => {
+  //   this.setState({ count: this.props.counter.count + 1 });
+  // };
+  // handleDecrement = (product) => {
+  //   if (this.props.counter.count >= 1) {
+  //     this.setState({ count: this.props.counter.count - 1 });
+  //   }
+  // };
 
   renderTags() {
     return (
