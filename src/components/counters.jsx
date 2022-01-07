@@ -12,7 +12,7 @@ class Counters extends Component {
   };
 
   handleIncrement = (counter) => {
-    console.log(counter);
+    const counters = [...this.state.counters];
   };
 
   handleDecrement = (counter) => {
