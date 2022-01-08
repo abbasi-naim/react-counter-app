@@ -1,9 +1,17 @@
+import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./components/navbar";
+import React from "react";
 
-function App() {
-  return <NavBar />;
-  <main className="countainer"></main>;
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <NavBar />
+        <main className="container"></main>
+      </div>
+    );
+  }
 }
 
 export default App;
