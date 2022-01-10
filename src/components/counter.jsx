@@ -29,34 +29,37 @@ class Counter extends Component {
   // }
   render() {
     return (
-      <div>
-        {/* <h1>Counter #{this.props.counter.id}</h1> */}
-        <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
+      <div className="row">
+        <div className="col-1">
+          <Badge bg={this.getBadgeClasses()}>{this.formatCount()}</Badge>
+        </div>
+        <div className="col">
+          <Button
+            onClick={() => this.props.onIncrement(this.props.counter)}
+            variant="secondary btn-sm m-2"
+          >
+            Increment
+          </Button>
 
-        <Button
-          onClick={() => this.props.onIncrement(this.props.counter)}
-          variant="secondary btn-sm m-2"
-        >
-          Increment
-        </Button>
-
-        {/* {this.props.counter.tags.length === 0 && (
+          {/* {this.props.counter.tags.length === 0 && (
           <p>There is no tags to display!</p>
         )} */}
 
-        {/* {this.renderTags()} */}
-        <Button
-          onClick={() => this.props.onDecrement(this.props.counter)}
-          variant="secondary btn-sm"
-        >
-          Decrement
-        </Button>
-        <button
-          onClick={() => this.props.onDelete(this.props.counter.id)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Delete
-        </button>
+          {/* {this.renderTags()} */}
+          <Button
+            onClick={() => this.props.onDecrement(this.props.counter)}
+            variant="secondary btn-sm"
+          >
+            Decrement
+          </Button>
+          <button
+            onClick={() => this.props.onDelete(this.props.counter.id)}
+            className="btn btn-danger btn-sm m-2"
+          >
+            Delete
+          </button>
+        </div>
+        {/* <h1>Counter #{this.props.counter.id}</h1> */}
       </div>
     );
   }
