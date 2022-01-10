@@ -49,6 +49,7 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <Counters
+            counters={this.state.counters}
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
