@@ -25,10 +25,8 @@ class App extends Component {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
-    if (counters[index].value >= 1) {
-      counters[index].value--;
-      this.setState({ counters });
-    }
+    counters[index].value--;
+    this.setState({ counters });
   };
 
   handleReset = () => {
@@ -46,7 +44,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />
+        <NavBar
+          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+        />
         <main className="container">
           <Counters
             counters={this.state.counters}
